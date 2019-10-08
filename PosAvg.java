@@ -58,6 +58,10 @@ import java.io.IOException;
 		{
 			capacity = stations.length;  
 			capacity = capacity + 10;
+			if (capacity > 121 )	
+			{
+				capacity = 121;       //stops the program from going past the arrays capacity
+			}
 			String[] newArray = new String[capacity];
 
 			for (int i = 0; i < stations.length; i++) 	// storing the data in the

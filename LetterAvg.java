@@ -9,20 +9,22 @@ public class LetterAvg
 		
 		private int counter;
 		private int capacity;
+		
+		private int letterAvg;
 	
 
-	public LetterAvg(char c) 
+	public LetterAvg(int letterAvg) 
+	{
+		this.letterAvg = letterAvg;
+	}
+	/*
+	public int numberOfStationWithLetterAvg() 
 	{
 		
-		// TODO Auto-generated constructor stub
-	}
-
-	public String numberOfStationWithLetterAvg() 
-	{
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
+
+	*/
 	public void expandStationsArray()
 	{
 		capacity = stations.length;  

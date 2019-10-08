@@ -5,7 +5,7 @@ import java.io.IOException;
 
 	public class PosAvg 
 	{
-		private String[] stations = new String[121];
+		private String[] stations = new String[2];
 		private String stID;
 		
 		private int counter;
@@ -23,7 +23,7 @@ import java.io.IOException;
 			{
 				e.printStackTrace();
 			}
-			// TODO Auto-generated constructor stub
+			
 		}
 		
 		public int indexOfStation() 
@@ -34,7 +34,7 @@ import java.io.IOException;
 			{
 				if (stations[i].equals(index)) 
 				{
-					counter = i;
+					counter = i;  //returning the index of counter
 				}
 			}
 			return counter;
@@ -43,14 +43,14 @@ import java.io.IOException;
 		
 		public String toString()	
 		{
-			String index = "The index of the city is: " + indexOfStation();
 			
 			String station1 = stations[indexOfStation() - 1];
 			String station2 = stations[indexOfStation() + 1];
-			String station3 = stations[indexOfStation() - 2]; //
+			String station3 = stations[indexOfStation() - 2]; //to avoid generating error
 			String station4 = stations[indexOfStation() + 2];
 			
-			String data = "This index is average of " + station1 + "and " + station2 + "," + station3 + "and " + station4 + ", "
+			String data = "The index of the city is: " + indexOfStation() 
+			+ "\n This index is average of " + station1 + "and " + station2 + "," + station3 + "and " + station4 + ", "
 					+ "and so on.";
 			
 			return data;

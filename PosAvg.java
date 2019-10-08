@@ -4,6 +4,7 @@ import java.io.IOException;
 
 	public class PosAvg 
 	{
+		private static final int stationsLength = 121;
 		private String[] stations = new String[2];
 		private String stID;
 		
@@ -29,7 +30,7 @@ import java.io.IOException;
 		{
 			String index = stID;
 			int counter = 0;
-			for (int i = 1; i < 121; i++)	
+			for (int i = 1; i < stationsLength; i++)	
 			{
 				if (stations[i].equals(index)) 
 				{

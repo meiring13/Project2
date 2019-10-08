@@ -4,6 +4,8 @@ import java.io.IOException;
 
 public class LetterAvg  
 	{
+		private static final int arrayLength = 121;
+
 		private String[] stations = new String[2];
 		
 		private int counter;
@@ -29,7 +31,7 @@ public class LetterAvg
 	public String toString() 
 	{
 		String data = "They are: ";
-		for (int i = 1; i < stations.length - 1; i++) 
+		for (int i = 1; i < arrayLength; i++) 
 		{
 			if (stations[i].charAt(0) == letterAvg) 
 			{
@@ -42,9 +44,9 @@ public class LetterAvg
 	public int numberOfStationWithLetterAvg() 
 	{
 		int numOfSameLetterAvg = 0;
-		for (int i = 1; i < stations.length - 1; i++) 
+		for (int i = 1; i < arrayLength; i++) 
 		{
-			if (stations[i].charAt(0) == letterAvg) //first letter of all the stations
+			if (stations[i].charAt(0) == (char)letterAvg) //first letter of all the stations
 			{
 				++numOfSameLetterAvg; 
 			}
@@ -89,7 +91,7 @@ public class LetterAvg
 			++counter;
 			String add = lineOfData.substring(1, 5);  //white space in Mesonet.txt
 			stations[counter] = add;
-			br.readLine();
+			lineOfData = br.readLine();
 		}
 		br.close();
 	}

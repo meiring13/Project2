@@ -15,6 +15,15 @@ public class LetterAvg
 	public LetterAvg(int letterAvg) 
 	{
 		this.letterAvg = letterAvg;
+		
+		try {					
+			read("Mesonet.txt");	
+		}
+		catch (IOException e)		
+		{
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public String toString() 

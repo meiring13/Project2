@@ -8,8 +8,6 @@ public class LetterAvg
 
 		private static final int stationsLength = 121;
 
-		private static final int arrayLength = 121;
-
 		private String[] stations = new String[2];
 		
 		private int counter;
@@ -31,11 +29,11 @@ public class LetterAvg
 		}
 		
 	}
-	
+													//due to a null for stations[0], stating i at 1 bypasses that error
 	public String toString() 
 	{
 		String data = "They are: ";
-		for (int i = 1; i < arrayLength; i++) 
+		for (int i = 1; i < stationsLength; i++) 
 		{
 			if (stations[i].charAt(0) == letterAvg) 
 			{
@@ -48,20 +46,20 @@ public class LetterAvg
 	public int numberOfStationWithLetterAvg() 
 	{
 		int numOfSameLetterAvg = 0;
-		for (int i = 1; i < arrayLength; i++) 
+		for (int i = 1; i < stationsLength; i++) 
 		{
-			if (stations[i].charAt(0) == (char)letterAvg) //first letter of all the stations
+			if (stations[i].charAt(0) == letterAvg) //first letter of all the stations
 			{
 				++numOfSameLetterAvg; 
 			}
 		}
-		return numOfSameLetterAvg;
+		return numOfSameLetterAvg;		
 	}
 
 	public void expandStationsArray()
 	{
 		capacity = stations.length;  
-		capacity = capacity + 10;
+		capacity = capacity + 10;				//expands the array by 10 when needed
 		if (capacity > stationsLength)	
 		{
 			capacity = stationsLength;       //stops the program from going past the arrays capacity
@@ -92,14 +90,14 @@ public class LetterAvg
 		while(lineOfData != null)	
 		{
 		//TODO read in Mesonet.txt
-			if (capacity >= counter  - 1)	
+			if (capacity >= counter  - 1)	//in order for capacity to be less than counter always 
 			{
-				expandStationsArray();
+				expandStationsArray();		//if the array needs more space then we expand
 			}
 			++counter;
 			String add = lineOfData.substring(1, 5);  //white space in Mesonet.txt
 			stations[counter] = add;
-			lineOfData = br.readLine();
+			lineOfData = br.readLine();  //always need to read the nextline
 		}
 		br.close();
 	}

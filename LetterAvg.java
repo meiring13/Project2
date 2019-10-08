@@ -4,6 +4,10 @@ import java.io.IOException;
 
 public class LetterAvg  
 	{
+		private static final int skippingLimit = 3;
+
+		private static final int stationsLength = 121;
+
 		private static final int arrayLength = 121;
 
 		private String[] stations = new String[2];
@@ -58,9 +62,9 @@ public class LetterAvg
 	{
 		capacity = stations.length;  
 		capacity = capacity + 10;
-		if (capacity > 121 )	
+		if (capacity > stationsLength)	
 		{
-			capacity = 121;       //stops the program from going past the arrays capacity
+			capacity = stationsLength;       //stops the program from going past the arrays capacity
 		}
 		String[] newArray = new String[capacity];
 
@@ -79,7 +83,7 @@ public class LetterAvg
 		FileReader fr = new FileReader(filename);
 		BufferedReader br = new BufferedReader(fr);
 	
-		for (int i = 0; i < 3; i++)	
+		for (int i = 0; i < skippingLimit; i++)	
 		{
 			br.readLine();  //skip first 3 lines
 		}

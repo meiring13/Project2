@@ -59,9 +59,9 @@ import java.io.IOException;
 		{
 			capacity = stations.length;  
 			capacity = capacity + 10;
-			if (capacity > 121 )	
+			if (capacity > stationsLength)	
 			{
-				capacity = 121;       //stops the program from going past the arrays capacity
+				capacity = stationsLength;       //stops the program from going past the arrays capacity
 			}
 			String[] newArray = new String[capacity];
 

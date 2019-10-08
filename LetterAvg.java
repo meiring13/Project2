@@ -20,7 +20,15 @@ public class LetterAvg
 	
 	public int numberOfStationWithLetterAvg() 
 	{
-		
+		int numOfSameLetterAvg = 0;
+		for (int i = 0; i < stations.length; i++) 
+		{
+			if (stations[i].charAt(0) == letterAvg) //first letter of all the stations
+			{
+				++numOfSameLetterAvg; 
+			}
+		}
+		return numOfSameLetterAvg;
 	}
 
 	public void expandStationsArray()

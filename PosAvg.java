@@ -49,7 +49,7 @@ import java.io.IOException;
 			String station3 = stations[indexOfStation() - 2]; //to avoid generating error
 			String station4 = stations[indexOfStation() + 2];
 			
-			String data ="\nThis index is average of " + station1 + " and " + station2 + ", " + station3 + " and " + station4 + ", "
+			String data ="This index is average of " + station1 + " and " + station2 + ", " + station3 + " and " + station4 + ", "
 					+ "and so on.";
 			
 			return data;

@@ -1,10 +1,7 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class MesoInherit extends MesoAbstract //extends mesoAbstract 
 {
-	MesoStation mesoStation;
+		private MesoStation mesoStation;
 
 		public MesoInherit(MesoStation mesoStation) 
 		{
@@ -17,7 +14,7 @@ public class MesoInherit extends MesoAbstract //extends mesoAbstract
 		int sumAscii = 0;	
 		for (int i = 0; i < mesoStation.getStID().length(); i++)	
 		{
-			sumAscii += mesoStation.getStID().charAt(i);  
+			sumAscii += (int)mesoStation.getStID().charAt(i);  
 		}
 		
 		double average = (double)sumAscii/4;  //averaging the values

@@ -10,7 +10,7 @@ public class LetterAvg
 		private int counter;
 		private int capacity;
 		
-		private int letterAvg;
+		int letterAvg;
 	
 
 	public LetterAvg(int letterAvg) 
@@ -20,7 +20,7 @@ public class LetterAvg
 	
 	public int numberOfStationWithLetterAvg() 
 	{
-		//
+		
 	}
 
 	public void expandStationsArray()

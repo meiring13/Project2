@@ -5,7 +5,6 @@ import java.io.IOException;
 public class LetterAvg  
 	{
 		private String[] stations = new String[2];
-		private String stID;
 		
 		private int counter;
 		private int capacity;
@@ -21,7 +20,7 @@ public class LetterAvg
 	public String toString() 
 	{
 		String data = "They are: ";
-		for (int i = 0; i < stations.length; i++) 
+		for (int i = 1; i < stations.length - 1; i++) 
 		{
 			if (stations[i].charAt(0) == letterAvg) 
 			{
@@ -34,7 +33,7 @@ public class LetterAvg
 	public int numberOfStationWithLetterAvg() 
 	{
 		int numOfSameLetterAvg = 0;
-		for (int i = 0; i < stations.length; i++) 
+		for (int i = 1; i < stations.length - 1; i++) 
 		{
 			if (stations[i].charAt(0) == letterAvg) //first letter of all the stations
 			{
@@ -79,8 +78,9 @@ public class LetterAvg
 				expandStationsArray();
 			}
 			++counter;
-			String add = lineOfData.substring(1, 2);  //white space in Mesonet.txt
+			String add = lineOfData.substring(1, 5);  //white space in Mesonet.txt
 			stations[counter] = add;
+			br.readLine();
 		}
 		br.close();
 	}

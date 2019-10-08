@@ -29,7 +29,7 @@ import java.io.IOException;
 		{
 			String index = stID;
 			int counter = 0;
-			for (int i = 0; i < stations.length; i++)	
+			for (int i = 1; i < 121; i++)	
 			{
 				if (stations[i].equals(index)) 
 				{
@@ -48,9 +48,8 @@ import java.io.IOException;
 			String station3 = stations[indexOfStation() - 2]; //to avoid generating error
 			String station4 = stations[indexOfStation() + 2];
 			
-			String data = "The index of the city is: " + indexOfStation() 
-			+ "\n This index is average of " + station1 + "and " + station2 + "," + station3 + "and " + station4 + ", "
-					+ "and so on.";
+			String data ="\nThis index is average of " + station1 + " and " + station2 + ", " + station3 + " and " + station4 + ", "
+					+ " and so on.";
 			
 			return data;
 		}
@@ -90,8 +89,9 @@ import java.io.IOException;
 				expandStationsArray();
 			}
 			++counter;
-			String add = lineOfData.substring(1, 2);  //white space in Mesonet.txt
+			String add = lineOfData.substring(1, 5);  //white space in Mesonet.txt
 			stations[counter] = add;
+			lineOfData = br.readLine();	
 		}
 		br.close();
 	

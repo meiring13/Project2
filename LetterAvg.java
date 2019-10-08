@@ -17,14 +17,12 @@ public class LetterAvg
 	{
 		this.letterAvg = letterAvg;
 	}
-	/*
+	
 	public int numberOfStationWithLetterAvg() 
 	{
-		
+		//
 	}
-	
 
-	*/
 	public void expandStationsArray()
 	{
 		capacity = stations.length;  

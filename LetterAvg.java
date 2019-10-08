@@ -32,7 +32,7 @@ public class LetterAvg
 													//due to a null for stations[0], stating i at 1 bypasses that error
 	public String toString() 
 	{
-		String data = "They are: ";
+		String data = "They are:";
 		for (int i = 1; i < stationsLength; i++) 
 		{
 			if (stations[i].charAt(0) == letterAvg) 

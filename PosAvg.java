@@ -4,7 +4,7 @@ import java.io.IOException;
 
 	public class PosAvg 
 	{
-		private static final int stationsLength = 121;
+		private static final int stationsLength = 121; //no magic numbers
 		private String[] stations = new String[2];
 		private String stID;
 		
@@ -17,7 +17,7 @@ import java.io.IOException;
 			this.stID = stID;
 			
 			try {					
-				read("Mesonet.txt");	
+				read("Mesonet.txt");	//calling read method 
 			}
 			catch (IOException e)		
 			{
@@ -30,7 +30,7 @@ import java.io.IOException;
 		{
 			String index = stID;
 			int counter = 0;
-			for (int i = 1; i < stationsLength; i++)	
+			for (int i = 1; i < stationsLength; i++) 
 			{
 				if (stations[i].equals(index)) 
 				{
@@ -46,7 +46,7 @@ import java.io.IOException;
 			
 			String station1 = stations[indexOfStation() - 1];
 			String station2 = stations[indexOfStation() + 1];
-			String station3 = stations[indexOfStation() - 2]; //to avoid generating error
+			String station3 = stations[indexOfStation() - 2]; //to avoid generating error 
 			String station4 = stations[indexOfStation() + 2];
 			
 			String data ="This index is average of " + station1 + " and " + station2 + ", " + station3 + " and " + station4 + ", "
@@ -77,7 +77,7 @@ import java.io.IOException;
 	public void read(String filename) throws IOException
 	{
 		
-		FileReader fr = new FileReader(filename);
+		FileReader fr = new FileReader(filename);   
 		BufferedReader br = new BufferedReader(fr);
 		
 		for (int i = 0; i < 3; i++)	
@@ -95,8 +95,8 @@ import java.io.IOException;
 			}
 			++counter;
 			String add = lineOfData.substring(1, 5);  //white space in Mesonet.txt
-			stations[counter] = add;
-			lineOfData = br.readLine();	
+			stations[counter] = add;				//adding station id to stations
+			lineOfData = br.readLine();	//needed for reading in next line of stations
 		}
 		br.close();
 	

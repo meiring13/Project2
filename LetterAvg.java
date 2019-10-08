@@ -18,6 +18,19 @@ public class LetterAvg
 		this.letterAvg = letterAvg;
 	}
 	
+	public String toString() 
+	{
+		String data = "They are: ";
+		for (int i = 0; i < stations.length; i++) 
+		{
+			if (stations[i].charAt(0) == letterAvg) 
+			{
+				data += "\n" + stations[i];			//every time a new station is added it will be put on a newline
+			}
+		}
+		return data;
+	}
+	
 	public int numberOfStationWithLetterAvg() 
 	{
 		int numOfSameLetterAvg = 0;

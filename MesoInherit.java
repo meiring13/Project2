@@ -1,25 +1,35 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class MesoInherit
-	{
-		
-		private String mesoStation;
-		private String stID;
-
+public class MesoInherit extends MesoAbstract //extends mesoAbstract 
+{
+	private MesoStation mesoStation;
+	
 		public MesoInherit(MesoStation mesoStation) 
 		{
-			// TODO Auto-generated constructor stub
+			this.mesoStation = mesoStation;
 		}
-
-		public int[] calAverage() 
+		
+		public MesoStation getMesoStation() 
 		{
-			//TODO 
+			return mesoStation;
 		}
-
-		public char letterAverage() 
+	/*
+	public int[] calAverage() 
+	{
+		int[] data = new int[3];
+		for (int i = 0; i < data.length; i++)	
 		{
-			//TODO calculate how many stations start with O.
-			String stationsStartingWith = this.mesoStation;
-			
+			//TODO
 		}
-
+		
 	}
+	*/
+	public char letterAverage() 
+	{
+		return 0;
+		// TODO Auto-generated method stub
+	}
+	
+}
